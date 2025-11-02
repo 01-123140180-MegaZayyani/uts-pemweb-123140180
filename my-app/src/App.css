@@ -1,0 +1,195 @@
+/* Reset dan Global Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f4ffec; /* Warna latar belakang lembut */
+    color: #333;
+}
+
+.app-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.app-header {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Search Form (Fitur Wajib 1) */
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.search-form input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-form button {
+    padding: 12px 20px;
+    background-color: #28a745; /* Hijau */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-form button:hover {
+    background-color: #1e7e34;
+}
+
+/* Movie Grid (Fitur Wajib 2 & 5: Responsive) */
+.movie-grid {
+    display: grid;
+    /* Grid default: 3 kolom di desktop */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 25px;
+}
+
+.movie-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 330px; 
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+/* Detail Card (Fitur Wajib 3: Modal) */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.detail-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 90%;
+    width: 700px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #999;
+}
+
+.detail-content {
+    display: flex;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.detail-content img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Tombol Favorit (Fitur Wajib 4) */
+.btn-favorite {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    display: block; /* Agar memakan lebar penuh di detail */
+    width: 100%; 
+    transition: background-color 0.2s;
+}
+
+.btn-favorite.active {
+    background-color: #dc3545; /* Merah untuk Hapus Favorit */
+    color: white;
+    border-color: #dc3545;
+}
+
+/* Status Message */
+.status-message {
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.error-message {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+
+/* Media Queries untuk Responsif (WAJIB) */
+@media (max-width: 768px) {
+    /* Layout grid 2 kolom di tablet/mobile besar */
+    .movie-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+        gap: 15px;
+    }
+    
+    .search-form {
+        flex-direction: column;
+    }
+    
+    /* Layout detail card ditumpuk di mobile */
+    .detail-card {
+        padding: 20px;
+        margin: 10px;
+    }
+    .detail-content {
+        flex-direction: column;
+    }
+    
+    .detail-content img {
+        max-width: 100%;
+        height: auto;
+    }
+}
