@@ -1,0 +1,28 @@
+# .gitignore
+
+# --------------------------
+# DEPENDENCIES (Wajib diabaikan)
+# --------------------------
+node_modules
+/package-lock.json
+
+# --------------------------
+# BUILD ARTIFACTS
+# --------------------------
+/build
+/dist
+/out
+
+# --------------------------
+# ENVIRONMENT VARIABLES (WAJIB diabaikan, sesuai ketentuan)
+# --------------------------
+.env
+.env.local
+.env.production
+
+# --------------------------
+# LOGS DAN CACHE
+# --------------------------
+npm-debug.log
+yarn-error.log
+.DS_Store
