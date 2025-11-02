@@ -6,8 +6,8 @@ import DetailCard from './components/DetailCard.jsx';
 import './App.css'; 
 
 // Ambil API Key. INI WAJIB MELALUI ENVIRONMENT VARIABLE (Ketentuan Anti-Hardcode).
-const API_KEY = process.env.REACT_APP_API_KEY; 
-const BASE_URL = `ttp://www.omdbapi.com/?i=tt3896198&apikey=8963ef`;
+const API_KEY = process.env.REACT_APP_API_KEY;
+const BASE_URL = `https://www.omdbapi.com/?apikey=${API_KEY}`;
 
 
 function App() {
@@ -52,8 +52,8 @@ function App() {
   const fetchMovies = useCallback(async () => {
     if (!searchTerm) return;
 
-    if (!API_KEY || API_KEY.includes('YOUR_API_KEY')) {
-        setError('Error: API Key belum dikonfigurasi di Environment Variable (REACT_APP_API_KEY).');
+    if (!API_KEY || API_KEY.includes('API_KEY')) {
+        setError(' API Key belum dikonfigurasi di Environment Variable (REACT_APP_API_KEY).');
         return;
     }
 
