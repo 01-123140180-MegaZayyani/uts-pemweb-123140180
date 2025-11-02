@@ -48,4 +48,8 @@ B. Instalasi Dependensi dan Menjalankan
   3. Akses: Aplikasi akan terbuka otomatis di browser Anda pada http://localhost:3000.
 
 Screenshot Aplikasi
+Tampilan Desktop 🖥 
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/6d1242b5-08e2-4b3c-b103-19df9c4acbd5" />
+
+Tampilan Mobile 📱
+![WhatsApp Image 2025-11-03 at 05 18 54_4f147811](https://github.com/user-attachments/assets/c1778939-c1c0-4aa5-b682-ed609975cce4)
