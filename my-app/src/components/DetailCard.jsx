@@ -11,7 +11,7 @@ function DetailCard({ movie, onClose, isFavorite, toggleFavorite }) {
                 <h2>{movie.Title} ({movie.Year})</h2>
                 
                 <div className="detail-content">
-                    <img src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/300x450?text=No+Poster'} alt={`Poster ${movie.Title}`} />
+                    <img src={movie.Poster !== 'N/A' ? movie.Poster : 'https://placehold.co/300x450?text=No+Poster'} alt={`Poster ${movie.Title}`} />
                     
                     <div>
                         <p><strong>Rating IMDb:</strong> {movie.imdbRating} / 10 ({movie.imdbVotes} votes)</p>

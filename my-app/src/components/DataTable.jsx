@@ -8,6 +8,13 @@ function DataTable({ movies, onSelectMovie, toggleFavorite }) {
           <img 
             src={movie.Poster !== 'N/A' ? movie.Poster : 'https://placehold.co/300x450?text=No+Poster'} 
             alt={`Poster ${movie.Title}`}
+
+            // Jika gambar utama (movie.Poster) gagal dimuat
+              onError={(e) => {
+                  // Ganti sumber gambar dengan placeholder
+                  e.target.onerror = null; // Mencegah loop tak terbatas
+                  e.target.src = 'https://placehold.co/300x450?text=Poster+Gagal+Load'; 
+              }}
             // Fitur Wajib 3: Trigger modal detail saat poster diklik
             onClick={() => onSelectMovie(movie.imdbID)}
           />
