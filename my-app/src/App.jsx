@@ -6,7 +6,7 @@ import DetailCard from './components/DetailCard.jsx';
 import './App.css'; 
 
 // Ambil API Key. INI WAJIB MELALUI ENVIRONMENT VARIABLE (Ketentuan Anti-Hardcode).
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = REACT_APP_API_KEY;
 const BASE_URL = `https://www.omdbapi.com/?apikey=${API_KEY}`;
 
 
@@ -54,7 +54,18 @@ function App() {
 
     if (!API_KEY || API_KEY.includes('API_KEY')) {
         setError(' API Key belum dikonfigurasi di Environment Variable (REACT_APP_API_KEY).');
-        return;
+        return (
+            <div className="app-container">
+                <Header />
+                <main>
+                    <div className="api-error-box">
+                        <h2 className="error-message">Deployment Error: API Key Hilang</h2>
+                        <p>Kunci API OMDB (**REACT_APP_API_KEY**) gagal dimuat dari Environment Variables Vercel.</p>
+                        <p>Pastikan Anda sudah mengaturnya dengan benar di *Project Settings* Vercel dan me-redeploy.</p>
+                    </div>
+                </main>
+            </div>
+        );
     }
 
     setIsLoading(true);
