@@ -36,7 +36,7 @@ Aplikasi Movie Database Explorer ini adalah katalog film berbasis web yang diban
 💻 Cara Instalasi dan Menjalankan
 
 Langkah-langkah ini mengasumsikan Anda sudah memiliki Node.js dan npm terinstal di sistem Anda.
-A. Setup Awal dan Kunci API
+A. Setup Awal dan Kunci API:
 
   1. Clone Repository: Unduh kode proyek ke mesin lokal Anda.
      ```bash
