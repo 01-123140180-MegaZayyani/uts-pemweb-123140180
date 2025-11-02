@@ -1,0 +1,17 @@
+name: Sync README
+on:
+  push:
+    paths:
+      - 'my-app/README.md'
+jobs:
+  copy-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: cp my-app/README.md README.md
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add README.md
+          git commit -m "Sync main README from my-app"
+          git push
