@@ -7,7 +7,7 @@ import './App.css';
 
 // Ambil API Key. INI WAJIB MELALUI ENVIRONMENT VARIABLE (Ketentuan Anti-Hardcode).
 const API_KEY = process.env.REACT_APP_API_KEY; 
-const BASE_URL = `https://www.omdbapi.com/?apikey=${8963ef}`;
+const BASE_URL = `ttp://www.omdbapi.com/?i=tt3896198&apikey=8963ef`;
 
 
 function App() {
