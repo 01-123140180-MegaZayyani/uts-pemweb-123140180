@@ -6,7 +6,7 @@ function DataTable({ movies, onSelectMovie, toggleFavorite }) {
       {movies.map((movie) => (
         <div key={movie.imdbID} className="movie-card">
           <img 
-            src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/300x450?text=No+Poster'} 
+            src={movie.Poster !== 'N/A' ? movie.Poster : 'https://placehold.co/300x450?text=No+Poster'} 
             alt={`Poster ${movie.Title}`}
             // Fitur Wajib 3: Trigger modal detail saat poster diklik
             onClick={() => onSelectMovie(movie.imdbID)}
