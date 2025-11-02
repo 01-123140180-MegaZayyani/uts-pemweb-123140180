@@ -1,5 +1,5 @@
 {
-  "name": "digit-0-movie-explorer",
+  "name": "movie-database-explorer",
   "version": "1.0.0",
   "description": "Aplikasi pencarian film menggunakan React Hooks dan OMDb API.",
   "main": "src/index.js",
